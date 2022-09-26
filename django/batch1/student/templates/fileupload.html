@@ -1,0 +1,20 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block style %}
+
+{% endblock style %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-4 offset-3 mt-5">
+        <h3>File Upload</h3>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="enter title.."> <br>
+            <textarea name="des" placeholder="enter description here..."></textarea><br>
+            <input type="file" name="file"><br>
+            <input type="submit" value="upload">
+        </form>
+        <p>{{msg}}</p>
+    </div>
+</div>
+{% endblock content%}

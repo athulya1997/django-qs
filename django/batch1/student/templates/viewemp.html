@@ -1,0 +1,28 @@
+{% extends 'nav.html' %}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 offset-3 mt-5">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Emp_name</th>    
+                    <th>Emp_age</th>  
+                    <th>Salary</th>  
+                    <th>Gender</th>    
+                      
+                </tr>
+                {% for i in data1 %}
+                <tr>
+                    <td>{{i.emp_name}}</td>
+                    <td>{{i.emp_age}}</td>
+                    <td>{{i.salary}}</td>
+                    <td>{{i.gender}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
+{% endblock content%}

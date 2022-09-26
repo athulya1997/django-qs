@@ -1,0 +1,28 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block style%}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock style%}
+{% block content %}
+
+    <div class="row mt-5">
+        <div class="col-sm-5 mt-5 offset-3">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input class="form-control" type="text" name="uname" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pswd" placeholder="password">
+                </div>
+                <!-- <div class="form-group"> -->
+                <input  class="btn btn-success" type="submit" value="Register">
+                <!-- </div> -->
+
+                
+            </form>
+            {{msg}}
+        </div>
+    </div>
+    
+{% endblock content %}

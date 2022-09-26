@@ -1,0 +1,40 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block style%}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock style%}
+{% block content %}
+
+    <div class="row mt-5">
+        <div class="col-sm-5 mt-5 offset-3">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input class="form-control" type="text" name="ffname" value="{{data.userid.fname}}" placeholder="first name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="llname" value="{{data.userid.lname}}" placeholder="last name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="aage" value="{{data.userid.age}}" placeholder="age">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pplace" value="{{data.userid.place}}" placeholder="place">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="uname" value="{{data.username}}" placeholder="place">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pswd" value="{{data.password}}" placeholder="place">
+                </div>
+                <!-- <div class="form-group"> -->
+                <input  class="btn btn-success" type="submit" value="Update">
+                <!-- </div> -->
+
+                
+            </form>
+
+        </div>
+    </div>
+    
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+        
+        <p id="p1">{{val1}}</p>
+        <p id="p2">{{val2}}</p>
+        <p id="p3">{{val3}}</p>
+      
+{%block script1%}
+<script>
+    var a = document.getElementById('p1').innerHTML;
+    var b = document.getElementById('p2').innerHTML;
+    var c = document.getElementById('p3').innerHTML;
+    console.log(typeof a);
+    var pa=parseInt(a);
+    var pb=parseInt(b);
+    var pc=parseInt(c);
+    if(pa>pb && pa>pc){
+        console.log("large="+pa);
+        document.write("largest number="+pa);
+       
+    }
+    else if(pb>pc && pb>pa){
+        console.log("large="+pb);
+        document.write("largest number="+pb);
+        
+    }
+    else{
+        console.log("large="+pc);
+        document.write("largest number="+pc);
+    }
+</script>
+{% endblock script1%}
+    
+{% endblock content %}

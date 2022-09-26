@@ -1,0 +1,28 @@
+{% extends 'nav.html' %}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 offset-3 mt-5">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Title</th>    
+                    <th>Des</th>  
+                    <th>Files</th>  
+                    
+                  
+                </tr>
+                {% for i in data %}
+                <tr>
+                
+                    <td>{{i.title}}</td>
+                    <td>{{i.des}}</td>
+                    <td>{{i.file}}</td>
+                   
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
+{% endblock content%}

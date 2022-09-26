@@ -1,0 +1,11 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock style %}
+{% block content %}
+    <h2>This is sample page</h2>
+    <p>your user name is{{username}}</p>
+    <img src="{% static 'img\len.jpg' %}" alt="len">
+    <p>Lorem ipsum</p>
+{% endblock content %}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%block style%}{% endblock style%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg-light">
+  
+  {%block script1%}{% endblock script1%}
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Navbar</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'sample' %}">Sample</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'start' data='asd'  %}">Startpage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'reg' %}">Register Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Register View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'stati' %}">Static View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'viewdata' %}">View Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'regformview' %}">Reg Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'viewmodelform' %}">View Model Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'employee' %}">Employee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'viewemp' %}">View Emp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'uploadfile' %}">File Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'uploadimage' %}">Image Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'filelist' %}">File List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'fcreate' %}">File Create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'fc' %}">File Create Model View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'c' %}">Cookie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'r' %}">Read Cookie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cookieform' %}">Form Cookie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'ses' %}">Session create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'rses' %}">Session Read</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logoutcook' %}">Logout Cook</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'ses_reg' %}">Session Reg</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'loginuser' %}">loginuser</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logoutses' %}">Logout Ses</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      {% block content %} {% endblock content %}
+</body>
+</html>

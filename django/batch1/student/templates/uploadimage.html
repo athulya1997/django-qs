@@ -1,0 +1,21 @@
+{% extends 'nav.html' %}
+<!-- {% load static %}
+{% block style %}
+
+{% endblock style %} -->
+{% block content %}
+    <div class="row">
+        <div class="col-sm-4 offset-3 mt-5">
+            <h3>UploadImage Model Form</h3>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table>
+                    {{form4.as_table}}
+                </table>
+                <input type="submit" value="Register">
+
+            </form>
+            <p>{{msg}}</p>
+        </div>
+    </div>
+{% endblock content %}

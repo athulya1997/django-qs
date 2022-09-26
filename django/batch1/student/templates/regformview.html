@@ -1,0 +1,19 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block style %}
+<!-- <link rel="stylesheet" href="{% static 'css/style1.css' %}"> -->
+{% endblock style %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-4 offset-3 mt-5">
+        <h3>Reg Form</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Register">
+    </form>
+    </div>
+</div>
+{% endblock content %}

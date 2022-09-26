@@ -1,0 +1,14 @@
+{% extends 'nav.html' %}
+{% block content %}
+    <h1>Create Cookie</h1>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <label for="">Name</label>
+        <input type="text" name="name" id="name">
+        <button type="submit">Save</button>
+    
+    </form>
+    <hr>
+    Cookie:{{name}}
+{% endblock content %}
